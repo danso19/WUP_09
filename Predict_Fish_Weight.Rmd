@@ -52,7 +52,7 @@ In this perch model we see that the best indicator, would be the two plotsthat h
 which.max(summary.out$adjr2)
 ```
 
-This tells us and explians that the best model out of all avilable would be model numer 2
+This tells us and explains that the best model out of all avilable would be model number 2
 
 ```{r}
 summary.out$which[2,]
@@ -85,6 +85,15 @@ as.data.frame(summary.out$outmat)
 library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
+
+The best model that we can see from this one uses Length 1, and Height and Width.
+
+```{r}
+which.max(summary.out$adjr2)
+```
+
+This allows us to see that the best model would in fact be model number three.
+
 
 
 
