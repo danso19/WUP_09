@@ -123,3 +123,18 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2
 ```
 
 The best two variables we can gather from this graph would be Length 2, and Width
+
+
+```{r}
+which.max(summary.out$adjr2)
+```
+
+This one tells us that the best one to use would be graph number 4.
+
+```{r}
+summary.out$which[2,]
+```
+
+
+
+
