@@ -135,6 +135,6 @@ This one tells us that the best one to use would be graph number 4.
 summary.out$which[2,]
 ```
 
-
+This summary allows us to see that the best two variables would be Lenth 2, and Width.
 
 
