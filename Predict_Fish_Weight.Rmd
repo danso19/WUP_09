@@ -40,13 +40,24 @@ regsubsets.out <-
                nvmax = NULL,    # NULL for no limit on number of variables
                force.in = NULL, force.out = NULL,
                method = "exhaustive")
-
-
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
 library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
 
 In this perch model we see that the best indicator, would be the two plotsthat help us find the differential in weight would be to use the Height, and Width indicators in this specific perch model.
+
+```{r}
+which.max(summary.out$adjr2)
+```
+
+This tells us and explians that the best model out of all avilable would be model numer 2
+
+```{r}
+summary.out$which[2,]
+```
+
 
 
 
